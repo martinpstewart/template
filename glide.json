@@ -6,7 +6,7 @@
 		"author": "Mart",
 		"params": [
 			{
-				"name": "html",
+				"name": "name",
 				"displayName": "Name",
 				"type": "string"
 			}
