@@ -9,25 +9,18 @@
     <div id="function-details"></div>
 
     <script>
-        // Your JSON data
-        var jsonData = [
-            {
-                "kind": "column",
-                "name": "Invoice Builder",
-                "description": "Allows you to Build a template invoice",
-                "author": "Mart",
-                "params": [
-                    {
-                        "name": "name",
-                        "displayName": "Name",
-                        "type": "string"
-                    }
-                ],
-                "result": {
-                    "type": "string"
+        // Function to load JSON file asynchronously
+        function loadJSON(callback) {
+            var xobj = new XMLHttpRequest();
+            xobj.overrideMimeType("application/json");
+            xobj.open('GET', 'glide.json', true);
+            xobj.onreadystatechange = function () {
+                if (xobj.readyState == 4 && xobj.status == 200) {
+                    callback(JSON.parse(xobj.responseText));
                 }
-            }
-        ];
+            };
+            xobj.send(null);
+        }
 
         // Function to render function details
         function renderFunctionDetails(data) {
@@ -45,8 +38,10 @@
             functionDetailsDiv.innerHTML = html;
         }
 
-        // Render function details
-        renderFunctionDetails(jsonData);
+        // Load JSON data and render function details
+        loadJSON(function(response) {
+            renderFunctionDetails(response);
+        });
     </script>
 </body>
 </html>
