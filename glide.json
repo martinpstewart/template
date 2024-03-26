@@ -1,0 +1,17 @@
+	{
+		"kind": "column",
+		"name": "HTML to PDF",
+		"description": "New Templeate",
+		"author": "Mart",
+		"params": [
+			{
+				"name": "html",
+				"displayName": "HTML",
+				"type": "string"
+			}
+		],
+		"result": {
+			"type": "string"
+		}
+	}
+]
