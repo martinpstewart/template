@@ -63,8 +63,6 @@ window.function = function (html) {
 	  <style>${customCSS}</style>
 	  <div class="main">
 	  <div class="header">
-		<button class="button" id="download">Download</button>
-	  </div>
 	  <div id="content">${html}</div>
 	  </div>
 	  <script>
@@ -75,17 +73,11 @@ window.function = function (html) {
 		button.className = 'downloading';
   
 		var opt = {
-		pagebreak: { mode: ['css'], before: ${JSON.stringify(breakBefore)}, after: ${JSON.stringify(breakAfter)}, avoid: ${JSON.stringify(breakAvoid)} },
-		margin: ${margin},
-		filename: '${fileName}',
 		html2canvas: {
 		  useCORS: true,
-		  scale: ${quality}
 		},
 		jsPDF: {
 		  unit: 'px',
-		  orientation: '${orientation}',
-		  format: [${finalDimensions}],
 		  hotfixes: ['px_scaling']
 		}
 		};
