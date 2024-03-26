@@ -1,12 +1,13 @@
-[	{
+[
+	{
 		"kind": "column",
 		"name": "HTML to PDF",
-		"description": "New Templeate",
+		"description": "Allows you to Build a template invoice",
 		"author": "Mart",
 		"params": [
 			{
-				"Name": "name",
-				"displayName": "Name",
+				"name": "name",
+				"displayName": "name",
 				"type": "string"
 			}
 		],
