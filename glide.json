@@ -5,8 +5,8 @@
 		"author": "Mart",
 		"params": [
 			{
-				"name": "html",
-				"displayName": "HTML",
+				"name": "name",
+				"displayName": "name",
 				"type": "string"
 			}
 		],
