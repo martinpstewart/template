@@ -7,7 +7,7 @@
 		"params": [
 			{
 				"name": "html",
-				"displayName": "HTML",
+				"displayName": "Name",
 				"type": "string"
 			}
 		],
