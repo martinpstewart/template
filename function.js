@@ -1,4 +1,4 @@
-window.function = function (html) {
+window.function = function (name) {
 	// FIDELITY MAPPING
 	const fidelityMap = {
 		low: 1,
@@ -7,7 +7,7 @@ window.function = function (html) {
 	};
 
 	// DYNAMIC VALUES
-	html = html.value ?? "No HTML set.";
+	name = html.value ?? "No HTML set.";
 	
 
 	const customCSS = `
