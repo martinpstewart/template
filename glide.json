@@ -1,7 +1,7 @@
 [
 	{
 		"kind": "column",
-		"name": "HTML to PDF",
+		"name": "Invoice Builder",
 		"description": "Allows you to Build a template invoice",
 		"author": "Mart",
 		"params": [
