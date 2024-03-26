@@ -1,21 +1,28 @@
-// driver.js
-
-// Function to fetch data from glide.json and populate the HTML template
-async function fetchDataAndPopulateTemplate() {
+window.addEventListener("message", async function(event) {
+    const { origin, data: { key, params } } = event;
+  
+    let result;
+    let error;
     try {
-        // Fetch data from glide.json
-        const response = await fetch('glide.json');
-        const data = await response.json();
-
-        // Extract the name from the data
-        const functionName = data[0].name;
-
-        // Post message to function.js window with the name data
-        window.parent.postMessage({ name: functionName }, '*');
-    } catch (error) {
-        console.error('Error fetching or processing data:', error);
+      result = await window.function(...params);
+    } catch (e) {
+      result = undefined;
+      try {
+        error = e.toString();
+      } catch (e) {
+        error = "Exception can't be stringified.";
+      }
     }
-}
-
-// Call the function to fetch data and populate the template
-fetchDataAndPopulateTemplate();
+  
+    const response = { key };
+    if (result !== undefined) {
+      // FIXME: Remove `type` once that's in staging
+      response.result = { value: result };
+    }
+    if (error !== undefined) {
+      response.error = error;
+    }
+  
+    event.source.postMessage(response, "*");
+  });
+  
