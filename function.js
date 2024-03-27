@@ -48,8 +48,10 @@ window.function = function (name, image, address, invoiceno, email, date, paydat
                     </table>
                 </td>
             </tr>
-
-            <!-- Other table rows -->
+            </table>
+            <table style="border: 1px solid black;">
+            ${items}
+            </table>
 
             <tr class="total">
                 <td></td>
