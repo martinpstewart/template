@@ -12,7 +12,6 @@ window.function = function (name,image) {
     // Populate HTML table with provided name
     const tableHTML = `
        <!DOCTYPE html>
-<html>
 	<head>
 		<meta charset="utf-8" />
 		<style>
@@ -198,7 +197,6 @@ window.function = function (name,image) {
 			</table>
 		</div>
 	</body>
-</html>
     `;
 
     const customCSS = `
