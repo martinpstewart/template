@@ -1,4 +1,4 @@
-window.function = function (name, image, address, invoiceno, email, date, ) {
+window.function = function (name, image, address, invoiceno, email, date, paydate) {
     // FIDELITY MAPPING
     const fidelityMap = {
         low: 1,
@@ -13,6 +13,8 @@ window.function = function (name, image, address, invoiceno, email, date, ) {
     invoiceno = invoiceno.value ?? "No Invoice No";
     email = email.value ?? "No Email";
     date = date.value ?? "No Date";
+    paydate = paydate.value ?? "No Payment Due Date";
+
 
 
 
@@ -27,8 +29,8 @@ window.function = function (name, image, address, invoiceno, email, date, ) {
                 </td>
                 <td>
                     Invoice #: ${invoiceno}<br/>
-                    Created: January 1, 2023<br/>
-                    Due: February 1, 2023
+                    Created: ${date}<br/>
+                    Due: ${paydate}
                 </td>
             </tr>
         
