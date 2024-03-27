@@ -1,21 +1,23 @@
 [
-	{
-		"kind": "column",
-		"name": "Invoice Template",
-		"description": "New Template",
-		"author": "Mart",
-		"params": [
-			{
-				"name": "name",
-				"displayName": "Name",
-				"type": "string"
-			},
-			{
-				"image": "image",
-				"displayName": "Image",
-				"type": "string"
-			},
-		"result": {
-			"type": "string"
-		}
+    {
+        "kind": "column",
+        "name": "Invoice Template",
+        "description": "New Template",
+        "author": "Mart",
+        "params": [
+            {
+                "name": "name",
+                "displayName": "Name",
+                "type": "string"
+            },
+            {
+                "name": "image",
+                "displayName": "Image",
+                "type": "string"
+            }
+        ],
+        "result": {
+            "type": "string"
+        }
+    }
 ]
