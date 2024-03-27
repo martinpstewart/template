@@ -1,4 +1,4 @@
-window.function = function (name, image) {
+window.generateInvoice = function (name, image) {
     // FIDELITY MAPPING
     const fidelityMap = {
         low: 1,
@@ -23,53 +23,60 @@ window.function = function (name, image) {
                     Due: February 1, 2023
                 </td>
             </tr>
-        </table>
+        
+            <tr class="information">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td>
+                                ${name}<br/>
+                                12345 Sunny Road<br/>
+                                Sunnyville, CA 12345
+                            </td>
+                            <td>
+                                Acme Corp.<br/>
+                                John Doe<br/>
+                                john@example.com
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <tr class="information">
-            <td colspan="2">
-                <table>
-                    <tr>
-                        <td>
-                            ${name}<br/>
-                            12345 Sunny Road<br/>
-                            Sunnyville, CA 12345
-                        </td>
-                        <td>
-                            Acme Corp.<br/>
-                            John Doe<br/>
-                            john@example.com
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+            <!-- Other table rows -->
 
-        <!-- Other table rows -->
-
-        <tr class="total">
-            <td></td>
-            <td>Total: $385.00</td>
-        </tr>
-    </table>`;
+            <tr class="total">
+                <td></td>
+                <td>Total: $385.00</td>
+            </tr>
+        </table>`;
 
     // CUSTOM CSS
     const customCSS = `
         body {
-            margin: 0!important
+            margin: 0!important;
         }
         /* CSS Styles for the download button and scrollbar */
-
     `;
 
     // FINAL HTML
     const originalHTML = `
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
-        <style>${customCSS}</style>
-        <div class="main">
-            <div class="header">
-                <div id="content">${tableHTML}</div>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Invoice</title>
+            <style>${customCSS}</style>
+        </head>
+        <body>
+            <div class="main">
+                <div class="header">
+                    <div id="content">${tableHTML}</div>
+                </div>
+                <button id="download">Download</button>
             </div>
-            <button id="download">Download</button>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
             <script>
                 document.getElementById('download').addEventListener('click', function() {
                     var element = document.getElementById('content');
@@ -95,7 +102,8 @@ window.function = function (name, image) {
                     }).save();
                 });
             </script>
-        </div>`;
+        </body>
+        </html>`;
 
     var encodedHtml = encodeURIComponent(originalHTML);
     return "data:text/html;charset=utf-8," + encodedHtml;
