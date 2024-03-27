@@ -8,6 +8,7 @@ window.function = function (name,image) {
 
     // DYNAMIC VALUES
     name = name.value ?? "No HTML set.";
+	image = image.value ?? "No Image";
 
     // Populate HTML table with provided name
     const tableHTML = `
