@@ -7,12 +7,27 @@
         "params": [
             {
                 "name": "name",
-                "displayName": "Name",
+                "displayName": "Company Name",
                 "type": "string"
             },
             {
                 "name": "image",
                 "displayName": "Image",
+                "type": "string"
+            },
+            {
+                "name": "invoiceno",
+                "displayName": "Invoice Number",
+                "type": "string"
+            },
+            {
+                "name": "address",
+                "displayName": "Address",
+                "type": "string"
+            },
+            {
+                "name": "email",
+                "displayName": "Email",
                 "type": "string"
             }
         ],
