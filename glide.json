@@ -29,6 +29,16 @@
                 "name": "email",
                 "displayName": "Email",
                 "type": "string"
+            },
+            {
+                "name": "date",
+                "displayName": "Date Of Issue",
+                "type": "string"
+            },
+            {
+                "name": "paydate",
+                "displayName": "Payment Date Due",
+                "type": "string"
             }
         ],
         "result": {
