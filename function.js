@@ -1,4 +1,4 @@
-window.function = function (name, image) {
+window.function = function (name, image, address, invoiceno, email) {
     // FIDELITY MAPPING
     const fidelityMap = {
         low: 1,
@@ -9,6 +9,12 @@ window.function = function (name, image) {
     // DYNAMIC VALUES
     name = name.value ?? "No HTML set.";
     image = image.value ?? "No Image";
+    address = address.value ?? "No Address";
+    invoiceno = invoiceno.value ?? "No Invoice No";
+    email = email.value ?? "No Email";
+
+
+
 
     // HTML TABLE TEMPLATE
     const tableHTML = `
@@ -18,7 +24,7 @@ window.function = function (name, image) {
                     <img src="${image}" style="width: 100%; max-width: 300px"/>
                 </td>
                 <td>
-                    Invoice #: 123<br/>
+                    Invoice #: ${invoiceno}<br/>
                     Created: January 1, 2023<br/>
                     Due: February 1, 2023
                 </td>
@@ -30,13 +36,9 @@ window.function = function (name, image) {
                         <tr>
                             <td>
                                 ${name}<br/>
-                                12345 Sunny Road<br/>
-                                Sunnyville, CA 12345
+                                ${address}<br/>
                             </td>
-                            <td>
-                                Acme Corp.<br/>
-                                John Doe<br/>
-                                john@example.com
+                                ${email}
                             </td>
                         </tr>
                     </table>
