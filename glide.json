@@ -14,8 +14,7 @@
 				"image": "image",
 				"displayName": "Image",
 				"type": "string"
-			}
-		],
+			},
 		"result": {
 			"type": "string"
 		}
