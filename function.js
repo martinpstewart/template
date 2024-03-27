@@ -1,4 +1,4 @@
-window.function = function (name, image, address, invoiceno, email, date, paydate) {
+window.function = function (name, image, address, invoiceno, email, date, paydate, items) {
     // FIDELITY MAPPING
     const fidelityMap = {
         low: 1,
@@ -14,10 +14,7 @@ window.function = function (name, image, address, invoiceno, email, date, paydat
     email = email.value ?? "No Email";
     date = date.value ?? "No Date";
     paydate = paydate.value ?? "No Payment Due Date";
-
-
-
-
+    items = items.value ?? "No Line Items";
 
 
     // HTML TABLE TEMPLATE
