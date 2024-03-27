@@ -9,7 +9,7 @@
 				"name": "name",
 				"displayName": "Name",
 				"type": "string"
-			}
+			},
 			{
 				"image": "image",
 				"displayName": "Image",
