@@ -22,7 +22,7 @@ window.function = function (name, image, address, invoiceno, email, date, paydat
 
     // HTML TABLE TEMPLATE
     const tableHTML = `
-        <table>
+        <table style="border: 1px solid black;">
             <tr>
                 <td class="title">
                     <img src="${image}" style="width: 100%; max-width: 300px"/>
