@@ -1,4 +1,4 @@
-window.function = function (name, image, address, invoiceno, email) {
+window.function = function (name, image, address, invoiceno, email, date, ) {
     // FIDELITY MAPPING
     const fidelityMap = {
         low: 1,
@@ -12,6 +12,8 @@ window.function = function (name, image, address, invoiceno, email) {
     address = address.value ?? "No Address";
     invoiceno = invoiceno.value ?? "No Invoice No";
     email = email.value ?? "No Email";
+    date = date.value ?? "No Date";
+
 
 
 
