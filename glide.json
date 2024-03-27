@@ -39,6 +39,11 @@
                 "name": "paydate",
                 "displayName": "Payment Date Due",
                 "type": "string"
+            },
+            {
+                "name": "items",
+                "displayName": "Line Items",
+                "type": "string"
             }
         ],
         "result": {
