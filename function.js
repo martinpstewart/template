@@ -1,4 +1,4 @@
-window.generateInvoice = function (name, image) {
+window.function = function (name, image) {
     // FIDELITY MAPPING
     const fidelityMap = {
         low: 1,
