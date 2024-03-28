@@ -12,7 +12,17 @@
             },
             {
                 "name": "image",
-                "displayName": "Image",
+                "displayName": "Company Image",
+                "type": "string"
+            },
+            {
+                "name": "address",
+                "displayName": "Compnay Address",
+                "type": "string"
+            },
+            {
+                "name": "email",
+                "displayName": "Compnay Email",
                 "type": "string"
             },
             {
@@ -21,13 +31,18 @@
                 "type": "string"
             },
             {
-                "name": "address",
-                "displayName": "Address",
+                "name": "client",
+                "displayName": "Client Name",
                 "type": "string"
             },
             {
-                "name": "email",
-                "displayName": "Email",
+                "name": "clientaddress",
+                "displayName": "Client Address",
+                "type": "string"
+            },
+            {
+                "name": "clientemail",
+                "displayName": "Compnay Image",
                 "type": "string"
             },
             {
@@ -43,6 +58,11 @@
             {
                 "name": "items",
                 "displayName": "Line Items",
+                "type": "string"
+            },
+            {
+                "name": "total",
+                "displayName": "Grand Total",
                 "type": "string"
             }
         ],
