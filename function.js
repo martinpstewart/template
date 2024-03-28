@@ -25,7 +25,7 @@ window.function = function (name, image, address, email, client, clientaddress, 
 const tableHTML = `
      <table>
         <tr>
-            <td style="vertical-align: top;">
+            <td style="vertical-align: top;padding-right: 300px;">
                 <table>
                     <tr>
                         <td class="title" style="border: 1px solid black;">
