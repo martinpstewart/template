@@ -7,8 +7,8 @@ window.function = function (name, image, address, email, client, clientaddress, 
     };
 
     // DYNAMIC VALUES
-    image = image.value ?? "";
     name = name.value ?? "";
+    image = image.value ?? "";
     address = address.value ?? "";
     email = email.value ?? "";
     client = client.value ?? "";
