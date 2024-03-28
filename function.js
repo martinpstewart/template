@@ -23,56 +23,94 @@ window.function = function (name, image, address, email, client, clientaddress, 
 
     // HTML TABLE TEMPLATE
 const tableHTML = `
-     <table>
-        <tr>
-            <td style="vertical-align: top;padding-right: 300px;">
-                <table>
-                    <tr>
-                        <td class="title" style="border: 1px solid black;">
-                            <img src="${image}" style="width: 100%; max-width: 300px"/>
-                        </td>
-                        <td style="border: 1px solid black;">
-             
-                            <b>Company Name:</b><br/>
-                            ${name}<br/>
-                            ${address}<br/>
-                            ${email}
-                        </td>
-                    </tr>
-                </table>
-            </td>
-            <td style="vertical-align: top;">
-                <table>
-                    <tr class="information">
-                        <td colspan="2" style="border: 1px solid black;">
-                            <b>Invoice Details:</b><br/>
-                            Client:${client}<br/>
-                            Address: ${clientaddress}<br/>
-                            Email: ${clientemail}<br/>
-                            Invoice #: ${invoiceno}<br/>
-                            Created: ${date}<br/>
-                            Due: ${paydate}
-                        </td>
-                    </tr>
-                    </table>
-                    <tr> 
-                      <td colspan="2" style="border: 1px solid black;">
-                      <div style="margin: 0 auto; text-align: right;">
-                            <center><table>
-                                ${items}
-                            </table>
-                        </td>
-                    </tr>
-                </table>
+    <!DOCTYPE html>
+<html>
+<head>
+<style>
+    table {
+        border: none; /* Remove default border */
+        border-collapse: collapse;
+        width: auto; /* Set width to auto to fit content */
+        position: center;
+    }
+
+    table th, table td {
+        border: 1px solid #b3adad; /* Add border to cells */
+        padding: 5px;
+        text-align: center;
+        background: #ffffff;
+        color: #000000;
+    }
+
+    table th {
+        background: #f0f0f0;
+    }
+
+    .image-container {
+        position: auto;
+        top: 30px;
+        left: 30px;
+    }
+
+    .table-container {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="image-container">
+    <img src="https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/prBVH423vAaVvfxxh8Hd/pub/sYIX9K4ol5no2yOaFnvM.png" width="332" height="202">
+</div>
+
+<div class="table-container">
+    <table>
+        <tr class="information">
+            <td colspan="3" style="border: 1px solid black;">
+                <b>Invoice Details:</b><br/>
+                Client: ${client}<br/>
+                Address: ${clientaddress}<br/>
+                Email: ${clientemail}<br/>
+                Invoice #: ${invoiceno}<br/>
+                Created: ${date}<br/>
+                Due: ${paydate}
             </td>
         </tr>
+    </table>
+</div>
+<table>
+<td style="border: none; text-align: center;padding-left: 10px;">
+${name}<br/>
+${address}<br/>
+${email}<br/>
+</table>
+<center>
+<p>
+<table>
+    <thead>
         <tr>
-        <table>
-            <td colspan="2" style="margin: 100 auto; border: 1px solid black; text-align: right;">
-               <b> Total: ${total}
-           </b> </td>
+            <th>Item Name</th>
+            <th>Description</th>
+            <th>Unit Cost</th>
+            <th>Line Total</th>
         </tr>
-    </table>`;
+    </thead>
+    <tbody>
+     
+    </tbody>
+</table>
+   ${items}</center>
+   <center>
+<table>
+    <tr>
+        <td style="border: none; text-align: center;padding: 10px;">
+            <td>Total: ${total}</td>
+        </td>
+    </tr>
+</table>`;
 
 
     // CUSTOM CSS
