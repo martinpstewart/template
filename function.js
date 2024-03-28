@@ -23,55 +23,56 @@ window.function = function (name, image, address, email, client, clientaddress, 
 
     // HTML TABLE TEMPLATE
 const tableHTML = `
-    <table style="width: 100%;">
-    <tr>
-        <td style="width: 33.33%; vertical-align: top;">
-            <table>
-                <tr>
-                    <td class="title" style="border: 1px solid black;">
-                        <img src="${image}" style="width: 100%; max-width: 300px"/>
-                    </td>
-                    <td style="border: 1px solid black;">
-                       <b> ${name}</b><br/>
-                        ${address}<br/>
-                        ${email}
-                    </td>
-                </tr>
-            </table>
-        </td>
-        <td style="width: 33.33%; vertical-align: top;">
-            <table style="margin: 0 auto;">
-                <tr class="information">
-                    <td colspan="2" style="border: 1px solid black;">
-                        <b>Invoice Details:</b><br/>
-                        Client: ${client}<br/>
-                        Address: ${clientaddress}<br/>
-                        Email: ${clientemail}<br/>
-                        Invoice #: ${invoiceno}<br/>
-                        Created: ${date}<br/>
-                        Due: ${paydate}
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="border: 1px solid black;">
-                        <table>
-                            ${items}
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-        <td style="width: 33.33%; vertical-align: bottom;">
-            <table>
-                <tr>
-                    <td colspan="2" style="border: 1px solid black; text-align: right;">
-                        <b>Total: ${total}</b>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>`;
+     <table>
+        <tr>
+            <td style="vertical-align: top;">
+                <table>
+                    <tr>
+                        <td class="title" style="border: 1px solid black;">
+                            <img src="${image}" style="width: 100%; max-width: 300px"/>
+                        </td>
+                        <td style="border: 1px solid black;">
+             
+                            <b>Company Name:</b><br/>
+                            ${name}<br/>
+                            ${address}<br/>
+                            ${email}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="vertical-align: top;">
+                <table>
+                    <tr class="information">
+                        <td colspan="2" style="border: 1px solid black;">
+                            <b>Invoice Details:</b><br/>
+                            Client:${client}<br/>
+                            Address: ${clientaddress}<br/>
+                            Email: ${clientemail}<br/>
+                            Invoice #: ${invoiceno}<br/>
+                            Created: ${date}<br/>
+                            Due: ${paydate}
+                        </td>
+                    </tr>
+                    </table>
+                    <tr> 
+                      <td colspan="2" style="border: 1px solid black;">
+                      <div style="margin: 0 auto; text-align: right;">
+                            <center><table>
+                                ${items}
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+        <table>
+            <td colspan="2" style="margin: 100 auto; border: 1px solid black; text-align: right;">
+               <b> Total: ${total}
+           </b> </td>
+        </tr>
+    </table>`;
 
 
     // CUSTOM CSS
