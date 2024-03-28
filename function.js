@@ -95,6 +95,7 @@ ${email}<br/>
             <th>Item Name</th>
             <th>Description</th>
             <th>Unit Cost</th>
+            <th>Quantity</th>
             <th>Line Total</th>
         </tr>
     </thead>
