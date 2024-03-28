@@ -99,10 +99,10 @@ ${email}<br/>
         </tr>
     </thead>
     <tbody>
-     
+       ${items}
     </tbody>
 </table>
-   ${items}</center>
+ </center>
    <center>
 <table>
     <tr>
