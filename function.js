@@ -63,7 +63,7 @@ const tableHTML = `
 <body>
 
 <div class="image-container">
-    <img src="https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/prBVH423vAaVvfxxh8Hd/pub/sYIX9K4ol5no2yOaFnvM.png" width="332" height="202">
+    <img src="${image}" width="332" height="202">
 </div>
 
 <div class="table-container">
@@ -82,7 +82,7 @@ const tableHTML = `
     </table>
 </div>
 <table>
-<td style="border: none; text-align: center;padding-left: 10px;">
+<td style="border: none; text-align: left;padding-left: 10px;">
 ${name}<br/>
 ${address}<br/>
 ${email}<br/>
