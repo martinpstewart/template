@@ -1,4 +1,4 @@
-window.function = function (image, name, address, email, client, clientaddress, clientemail, invoiceno, date, paydate, items, total) {
+window.function = function (name, image, address, email, client, clientaddress, clientemail, invoiceno, date, paydate, items, total) {
     // FIDELITY MAPPING
     const fidelityMap = {
         low: 1,
