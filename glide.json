@@ -26,11 +26,6 @@
                 "type": "string"
             },
             {
-                "name": "invoiceno",
-                "displayName": "Invoice Number",
-                "type": "string"
-            },
-            {
                 "name": "client",
                 "displayName": "Client Name",
                 "type": "string"
@@ -43,6 +38,11 @@
             {
                 "name": "clientemail",
                 "displayName": "Client Email",
+                "type": "string"
+            },
+            {
+                "name": "invoiceno",
+                "displayName": "Invoice Number",
                 "type": "string"
             },
             {
