@@ -1,4 +1,4 @@
-window.function = function (name, image, address, invoiceno, email, date, paydate, items) {
+window.function = function (image, name, address, email, client, clientaddress, clientemail, invoiceno, date, paydate, items, total) {
     // FIDELITY MAPPING
     const fidelityMap = {
         low: 1,
@@ -7,14 +7,18 @@ window.function = function (name, image, address, invoiceno, email, date, paydat
     };
 
     // DYNAMIC VALUES
-    name = name.value ?? "No HTML set.";
-    image = image.value ?? "No Image";
-    address = address.value ?? "No Address";
-    invoiceno = invoiceno.value ?? "No Invoice No";
-    email = email.value ?? "No Email";
-    date = date.value ?? "No Date";
-    paydate = paydate.value ?? "No Payment Due Date";
-    items = items.value ?? "No Line Items";
+    image = image.value ?? "";
+    name = name.value ?? "";
+    address = address.value ?? "";
+    email = email.value ?? "";
+    client = client.value ?? "";
+    clientaddress = clientaddress.value ?? "";
+    clientemail = clientemail.value ?? "";
+    invoiceno = invoiceno.value ?? "";
+    date = date.value ?? "";
+    paydate = paydate.value ?? "";
+    items = items.value ?? "";
+    total = total.value ?? "";
 
 
     // HTML TABLE TEMPLATE
@@ -44,6 +48,7 @@ const tableHTML = `
                             <b>Invoice Details:</b><br/>
                             Client:${client}<br/>
                             Address: ${clientaddress}<br/>
+                            Email: ${clientemail}<br/>
                             Invoice #: ${invoiceno}<br/>
                             Created: ${date}<br/>
                             Due: ${paydate}
